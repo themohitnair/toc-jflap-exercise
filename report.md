@@ -2,25 +2,7 @@
 
 ---
 
-## Table of Contents
-
-1. Abstract
-2. Problem Statement
-3. Design Steps
-4. Tracing Strings
-   - String 1: `abbac`
-   - String 2: `abbacbca`
-   - String 3: `abacab`
-   - String 4: `babacb`
-   - String 5: `baac`
-   - String 6: `babcac`
-5. Multiple Run Simulation Output
-6. Five-tuple representation of the NFA
-7. Conclusion
-
----
-
-# Abstract
+## Abstract
 
 JFLAP (Java Formal Languages and Automata Package) is an educational software tool designed to aid in the teaching and learning of theoretical computer science concepts, particularly formal languages, automata theory, and computational theory. JFLAP provides an interactive environment where users can design, simulate, and experiment with various formal models, including finite automata, pushdown automata, Turing machines, regular expressions, and grammars.
 
@@ -214,7 +196,17 @@ $M = (Q, \Sigma, \delta, q_0, F)$ where:
 
 ---
 
-Here’s a conclusion for your report:
+## References
+
+- https://www.jflap.org
+- Introduction to Automata Theory, Languages and Computation, 3rd Edition, Pearson education, 2014
+- https://youtu.be/lRKE2RznkUU?feature=shared
+
+---
+
+## Repository
+
+All content referred to in this report have been pushed to the repository: https://github.com/themohitnair/toc-jflap-exercise
 
 ---
 
