@@ -74,7 +74,7 @@ The final Non-Deterministic Finite Automata constructed is as follows:
 
   ![](traces/abbac.png){width=60%}
 
-  ![](proof1.png)
+  ![](proofs/proof1.png)
 
 - **String 2:** `abbacbca`
 
@@ -93,7 +93,7 @@ The final Non-Deterministic Finite Automata constructed is as follows:
 
   ![](traces/abbacbca.png){width=60%}
 
-  ![](proof2.png)
+  ![](proofs/proof2.png)
 
 - **String 3:** `abacab`
 
@@ -110,7 +110,7 @@ The final Non-Deterministic Finite Automata constructed is as follows:
 
   ![](traces/abacab.png){width=60%}
 
-  ![](proof3.png)
+  ![](proofs/proof3.png)
 
 - **String 4:** `babacb`
 
@@ -127,7 +127,7 @@ The final Non-Deterministic Finite Automata constructed is as follows:
 
   ![](traces/babacb.png){width=60%}
 
-  ![](proof4.png)
+  ![](proofs/proof4.png)
 
 - **String 5:** `baac`
 
@@ -142,7 +142,7 @@ The final Non-Deterministic Finite Automata constructed is as follows:
 
   ![](traces/baac.png){width=60%}
 
-  ![](proof5.png)
+  ![](proofs/proof5.png)
 
 - **String 6:** `babcac`
 
@@ -159,7 +159,7 @@ The final Non-Deterministic Finite Automata constructed is as follows:
 
   ![](traces/babcac.png){width=60%}
 
-  ![](proof6.png)
+  ![](proofs/proof6.png)
 
 **Multiple Run Output in JFLAP**
 
