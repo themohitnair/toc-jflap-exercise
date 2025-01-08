@@ -4,16 +4,29 @@
 
 ## Table of Contents
 
-1. Problem Statement
-2. Design Steps
-3. Tracing Strings
-   - String 1: abbac
-   - String 2: abbacbca
-   - String 3: abacab
-   - String 4: babacb
-   - String 5: baac
-   - String 6: babcac
-4. Multiple Run Simulation Output
+1. Abstract
+2. Problem Statement
+3. Design Steps
+4. Tracing Strings
+   - String 1: `abbac`
+   - String 2: `abbacbca`
+   - String 3: `abacab`
+   - String 4: `babacb`
+   - String 5: `baac`
+   - String 6: `babcac`
+5. Multiple Run Simulation Output
+6. Five-tuple representation of the NFA
+7. Conclusion
+
+---
+
+# Abstract
+
+JFLAP (Java Formal Languages and Automata Package) is an educational software tool designed to aid in the teaching and learning of theoretical computer science concepts, particularly formal languages, automata theory, and computational theory. JFLAP provides an interactive environment where users can design, simulate, and experiment with various formal models, including finite automata, pushdown automata, Turing machines, regular expressions, and grammars.
+
+The tool supports step-by-step simulations, multiple input string testing, and visualizations of transitions, making it ideal for understanding abstract theoretical concepts in a concrete, visual manner. JFLAP also facilitates the construction and debugging of automata, allowing users to trace computation paths and identify errors in their designs.
+
+Widely adopted in academic settings, JFLAP bridges the gap between theory and practical application, offering students an engaging platform to explore the foundational concepts of computation. By providing hands-on experience, JFLAP enhances understanding, promotes experimentation, and serves as an invaluable resource for both instructors and students in the field of computer science.
 
 ---
 
@@ -55,6 +68,9 @@ Construct a Non-deterministic Finite Automaton (NFA) for the language \(L\) over
 
 - **Step 10:**
   From $q_6$, add all symbol transitions to move to non-accepting state $q_7$, so that symbols after encountering `ac` are not accepted.
+
+- **Step 11:**
+  From $q_7$, add all symbol transitions moving to itself.
 
 The final Non-Deterministic Finite Automata constructed is as follows:
 
@@ -168,5 +184,44 @@ The final Non-Deterministic Finite Automata constructed is as follows:
 ![](multiple-run-status.png)
 
 The results of Multiple Run prove that the manual traces for all six strings under the previous heading are correct.
+
+---
+
+## Five-Tuple Definition of the NFA
+
+$M = (Q, \Sigma, \delta, q_0, F)$ where:
+
+1. $Q = \{q_0, q_1, q_2, q_3, q_4, q_5, q_6, q_7\}$
+
+2. $\Sigma = \{a, b, c\}$
+
+3. $\delta: Q \times \Sigma \rightarrow \mathcal{P}(Q)$ is the transition function defined by the following table:
+
+| State | a              | b              | c           |
+| ----- | -------------- | -------------- | ----------- |
+| $q_0$ | $\{q_1\}$      | $\{q_4\}$      | $\emptyset$ |
+| $q_1$ | $\{q_1\}$      | $\{q_1, q_2\}$ | $\{q_1\}$   |
+| $q_2$ | $\emptyset$    | $\emptyset$    | $\{q_3\}$   |
+| $q_3$ | $\{q_3\}$      | $\{q_3\}$      | $\{q_3\}$   |
+| $q_4$ | $\{q_4, q_5\}$ | $\{q_4\}$      | $\{q_4\}$   |
+| $q_5$ | $\emptyset$    | $\emptyset$    | $\{q_6\}$   |
+| $q_6$ | $\{q_7\}$      | $\{q_7\}$      | $\{q_7\}$   |
+| $q_7$ | $\{q_7\}$      | $\{q_7\}$      | $\{q_7\}$   |
+
+4. $q_0$ is the initial state
+
+5. $F = \{q_3, q_6\}$ is the set of accepting states
+
+---
+
+Here’s a conclusion for your report:
+
+---
+
+## Conclusion
+
+In this exercise, a Non-Deterministic Finite Automaton (NFA) was successfully constructed and simulated in JFLAP to recognize strings satisfying specific language constraints. Through careful design and step-by-step tracing of multiple test strings, we validated the correctness of the NFA. The simulation outputs confirmed the alignment of the NFA's behavior with the given language rules, demonstrating its ability to accurately distinguish valid strings from invalid ones.
+
+The use of JFLAP proved invaluable in visualizing transitions and debugging the automaton, reinforcing its effectiveness as an educational tool for exploring theoretical concepts. By defining the NFA using its formal five-tuple representation and testing it through multiple-run simulations, clarity and rigor in the design process was ensured. This exercise highlights the importance of tools like JFLAP in bridging abstract computational theories with practical applications, enhancing both comprehension and learning outcomes.
 
 ---
